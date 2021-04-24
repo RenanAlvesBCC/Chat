@@ -1,0 +1,30 @@
+###Cadastra configuração
+POST localhost:3333/settings
+content-type: application/json
+
+{
+  "chat": true,
+  "username": "admin2"
+}
+
+### Cadastra usuário
+POST localhost:3333/users
+content-type: application/json
+
+{
+"email": "araujo1898@gmail.com"
+}
+
+###Enviar mensagem
+POST localhost:3333/messages
+content-type: application/json
+
+{
+  "user_id": "4d00dfd2-89d3-4553-9be3-3eeb458c47b9",
+  "text": "Olá, tudo bem? O que está acontecendo?",
+  "admin_id": "46ea9de6-af6f-46c7-866c-fa540bb292be"
+}
+
+###List messages by user
+GET localhost:3333/messages/4d00dfd2-89d3-4553-9be3-3eeb458c47b9
+content-type: application/json
